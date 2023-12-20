@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="myForm">
+        <!-- Randomly generated ID field -->
+        <label for="idField">ID:</label>
+        <input type="text" id="idField" value="" readonly>
+
+        <!-- User input fields -->
+        <label for="nameField">Name:</label>
+        <input type="text" id="nameField" placeholder="Enter your name" required>
+
+        <label for="regNumberField">Registration Number:</label>
+        <input type="text" id="regNumberField" placeholder="Enter registration number" required>
+
+        <label for="codeField">Code:</label>
+        <input type="text" id="codeField" placeholder="Enter code" required>
+
+        <label for="amountField">Amount:</label>
+        <input type="number" id="amountField" placeholder="Enter amount" required>
+
+        <!-- Static Fee field -->
+        <label for="feeField">Fee:</label>
+        <input type="text" id="feeField" value="17" readonly>
+
+        <!-- Display Total field -->
+        <label for="totalField">Total:</label>
+        <input type="text" id="totalField" value="" readonly>
+
+        <!-- Submit button -->
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div id="displayPage" class="hidden">
+        <!-- Display submitted data, QR code, and current date and time -->
+        <div id="displayData"></div>
+        <div id="qrCode"></div>
+        <div id="dateTime"></div>
+        <button id="printButton" class="print-btn" onclick="printDisplayPage()">Print</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
