@@ -43,7 +43,8 @@ button:hover {
 }
 
 #displayPage {
-    max-width: 600px;
+    max-width: 400px;
+    max-height: 600px;
     margin: auto auto;
     background-color: #fff;
     padding: 0px;
@@ -113,5 +114,5 @@ p {
 }
 
 img {
-    margin: 20px;
+    margin: 30px;
 }
