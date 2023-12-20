@@ -10,10 +10,9 @@
     <form id="myForm">
         <a href="https://kppolice.gov.pk/" target="_blank"> <img src="logo.png" alt="Police-logo" height="100px" width="100px" style="display: block; margin: auto;"> </a>
         <h1 style="text-align: center;">Challan Form</h1>
-        
         <!-- Randomly generated ID field -->
         <label for="idField">ID:</label>
-        <input type="text" id="idField" value="" readonly>
+        <input type="text" id="idField" value="" placeholder="Auto generated" readonly style="background-color: red;">
 
         <!-- User input fields -->
         <label for="nameField">Name:</label>
@@ -34,7 +33,7 @@
 
         <!-- Display Total field -->
         <label for="totalField">Total:</label>
-        <input type="text" id="totalField" value="" readonly>
+        <input type="text" id="totalField" value="" placeholder="Auto generated" readonly style="background-color: red;">
 
         <!-- Submit button -->
         <button type="button" onclick="submitForm()">Submit</button>
