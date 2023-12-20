@@ -7,9 +7,7 @@ function submitForm() {
     const challanAmountValue = parseFloat(document.getElementById('amountField').value);
     const serviceFeeValue = parseFloat(document.getElementById('feeField').value);
     const totalAmountValue = challanAmountValue + serviceFeeValue;
-
     const combinedValues = `KPK Traffic Police Challan Name ${offenderValue},Total Amount ${totalAmountValue},Challan ID ${idValue}`;
-
     // Hide the form
     const form = document.getElementById('myForm');
     form.style.display = 'none';
@@ -31,6 +29,7 @@ function submitForm() {
         <hr class="dotted-line">
         <p>Total Amount    : PKR. ${totalAmountValue.toFixed(0)}</p>
         <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=100x100" alt="QR Code">
+
         <p>Received by: TO Farhan Ali (1725)</p>
         <p>at ${new Date().toLocaleString()}</p>
         <p>Traffic Police Helpline 1915.</p>
