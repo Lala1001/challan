@@ -15,27 +15,29 @@ function submitForm() {
     // Display data on the custom-designed page
     const displayData = document.getElementById('displayData');
     displayData.innerHTML = `
-        <p class="fnt-sz"><strong>Khyber Pakhtunkhwa</strong><br>Traffic Police</p>
-        <p><strong>..........................................</p></strong>
-        <strong>Swat</strong>
-        <br>
-        <strong>${idValue}</strong>
-        <br>
-        <strong>PAID</strong>
-        <br>
-        Offender : ${offenderValue}
-        <br>
-        V.Reg# : ${vRegNumberValue}
-        <br>
-        <p><strong>..........................................</p></strong>
-        Violation Code's : ${violationCodeValue}
-        <br>
-        Challan Amount : PKR. ${challanAmountValue.toFixed(0)}
-        <br>
-        Service Fee     : PKR. ${serviceFeeValue.toFixed(0)}
-        <br>
-        <p><strong>..........................................</p></strong>
-        Total Amount    : PKR. ${totalAmountValue.toFixed(0)}
+        <h3>Khyber Pakhtunkhwa</h3>
+        <p>Traffic Police</p>
+        <p><strong>............................</strong></p>
+        <p><strong>Swat</strong></p>
+        <p>
+        <strong>${idValue}</strong></p>
+        <p>
+        <strong>PAID</strong></p>
+        <p>
+        Offender : ${offenderValue}</p>
+        <p>
+        V.Reg# : ${vRegNumberValue}</p>
+        
+        <p><strong>............................</strong></p>
+        <p>Violation Code's : ${violationCodeValue}</p>
+        <p>
+        Challan Amount : PKR. ${challanAmountValue.toFixed(0)}</p>
+        <p>
+        Service Fee     : PKR. ${serviceFeeValue.toFixed(0)}</p>
+        
+        <p><strong>............................</strong></p>
+        <p>
+        Total Amount    : PKR. ${totalAmountValue.toFixed(0)}</p>
         <br>
         <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=50x50" alt="QR Code">
 
