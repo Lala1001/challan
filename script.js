@@ -16,7 +16,7 @@ function submitForm() {
     const displayData = document.getElementById('displayData');
     displayData.innerHTML = `
         <p class="fnt-sz"><strong>Khyber Pakhtunkhwa</strong><br>Traffic Police</p>
-        <p>..........................................</p>
+        <p><strong>..........................................</p></strong>
         <strong>Swat</strong>
         <br>
         <strong>${idValue}</strong>
@@ -27,14 +27,14 @@ function submitForm() {
         <br>
         V.Reg# : ${vRegNumberValue}
         <br>
-        <p>..........................................</p>
+        <p><strong>..........................................</p></strong>
         Violation Code's : ${violationCodeValue}
         <br>
         Challan Amount : PKR. ${challanAmountValue.toFixed(0)}
         <br>
         Service Fee     : PKR. ${serviceFeeValue.toFixed(0)}
         <br>
-        <p>..........................................</p>
+        <p><strong>..........................................</p></strong>
         Total Amount    : PKR. ${totalAmountValue.toFixed(0)}
         <br>
         <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=50x50" alt="QR Code">
