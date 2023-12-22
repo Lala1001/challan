@@ -37,7 +37,7 @@ function submitForm() {
         <p>..........................................</p>
         Total Amount    : PKR. ${totalAmountValue.toFixed(0)}
         <br>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=45x45" alt="QR Code">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=50x50" alt="QR Code">
 
         <p>Received by: TO Farhan Ali (1725)</p>
         <p>at ${new Date().toLocaleString()}</p>
