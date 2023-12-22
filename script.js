@@ -15,9 +15,8 @@ function submitForm() {
     // Display data on the custom-designed page
     const displayData = document.getElementById('displayData');
     displayData.innerHTML = `
-        <strong>Khyber Pakhtunkhwa</strong><br>Traffic Police
-        <br>
-        <hr class="dotted-line">
+        <p class="fnt-sz"><strong>Khyber Pakhtunkhwa</strong><br>Traffic Police</p>
+        <p>..........................................</p>
         <strong>Swat</strong>
         <br>
         <strong>${idValue}</strong>
@@ -28,17 +27,17 @@ function submitForm() {
         <br>
         V.Reg# : ${vRegNumberValue}
         <br>
-        <hr class="dotted-line">
+        <p>..........................................</p>
         Violation Code's : ${violationCodeValue}
         <br>
         Challan Amount : PKR. ${challanAmountValue.toFixed(0)}
         <br>
         Service Fee     : PKR. ${serviceFeeValue.toFixed(0)}
         <br>
-        <hr class="dotted-line">
+        <p>..........................................</p>
         Total Amount    : PKR. ${totalAmountValue.toFixed(0)}
         <br>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=50x50" alt="QR Code">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=45x45" alt="QR Code">
 
         <p>Received by: TO Farhan Ali (1725)</p>
         <p>at ${new Date().toLocaleString()}</p>
