@@ -1,11 +1,24 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'ARIAL', sans-serif;
+    
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    font-size: 12px;
-    letter-spacing: 2px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
 }
+
+.fnt-sz {
+    
+    /* font-stretch: expanded; */
+    
+    transform: scaleX(1.2);
+    
+}
+
+
+
+
 
 form {
     max-width: 400px;
@@ -116,5 +129,5 @@ p {
 }
 /* Modify */
 img {
-    margin: 20px;
+    margin: 15px;
 }
