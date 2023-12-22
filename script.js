@@ -15,8 +15,8 @@ function submitForm() {
     // Display data on the custom-designed page
     const displayData = document.getElementById('displayData');
     displayData.innerHTML = `
-        <h3>Khyber Pakhtunkhwa</h3>
-        <p>Traffic Police</p>
+        <p style = "font-size:14px;"><strong>Khyber Pakhtunkhwa</strong></p>
+        <p style = "font-size:10px;">Traffic Police</p>
         <p><strong>............................</strong></p>
         <p><strong>Swat</strong></p>
         <p>
