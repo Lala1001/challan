@@ -21,13 +21,12 @@ function submitForm() {
         <p style = "font-size:14px;"><strong>Khyber Pakhtunkhwa</strong></p>
         <p style = "font-size:10px;">Traffic Police</p>
         <p><strong>............................</strong></p>
-        <p><strong>Swat</strong></p>
-        <p>
-        <strong>${idValue}</strong></p>
-        <p>
-        <strong>PAID</strong></p>
-        <p>
-        Offender : ${uppercaseOffenderValue}</p>
+        <p style = "font-weight: 2000; font-weight: bold;">Swat</p>
+        <p style = "font-weight: 2000; font-weight: bold;">
+        ${idValue}</p>
+        <p style = "font-weight: 2000; font-weight: bold;">PAID</p>
+        
+        <p>Offender : ${uppercaseOffenderValue}</p>
         <p>
         V.Reg# : ${vRegNumberValue1}</p>
         
@@ -44,7 +43,7 @@ function submitForm() {
         <br><strong>
         <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=65x65" alt="QR Code">
         </strong>
-        <p>Received by: TO Farhan Ali (172 5)</p>
+        <p>Received By: TO Farhan Ali (172 5)</p>
         <p>at ${new Date().toLocaleString()}</p>
         <p>Traffic Police Helpline 1915.</p>
     `;
