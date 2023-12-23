@@ -2,8 +2,11 @@ function submitForm() {
     // Get values from the form
     const idValue = generateRandomId();
     const offenderValue = document.getElementById('nameField').value;
+    const uppercaseOffenderValue = offenderValue.toUpperCase();
     const vRegNumberValue = document.getElementById('regNumberField').value;
+    const vRegNumberValue1 = vRegNumberValue.toUpperCase();
     const violationCodeValue = document.getElementById('codeField').value;
+    const violationCodeValue1 = `(${violationCodeValue})`;
     const challanAmountValue = parseFloat(document.getElementById('amountField').value);
     const serviceFeeValue = parseFloat(document.getElementById('feeField').value);
     const totalAmountValue = challanAmountValue + serviceFeeValue;
@@ -24,12 +27,12 @@ function submitForm() {
         <p>
         <strong>PAID</strong></p>
         <p>
-        Offender : ${offenderValue}</p>
+        Offender : ${uppercaseOffenderValue}</p>
         <p>
-        V.Reg# : ${vRegNumberValue}</p>
+        V.Reg# : ${vRegNumberValue1}</p>
         
         <p><strong>............................</strong></p>
-        <p>Violation Code's : ${violationCodeValue}</p>
+        <p>Violation Code's : ${violationCodeValue1}</p>
         <p>
         Challan Amount : PKR. ${challanAmountValue.toFixed(0)}</p>
         <p>
@@ -38,10 +41,10 @@ function submitForm() {
         <p><strong>............................</strong></p>
         <p>
         Total Amount    : PKR. ${totalAmountValue.toFixed(0)}</p>
-        <br>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=50x50" alt="QR Code">
-
-        <p>Received by: TO Farhan Ali (1725)</p>
+        <br><strong>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=65x65" alt="QR Code">
+        </strong>
+        <p>Received by: TO Farhan Ali (172 5)</p>
         <p>at ${new Date().toLocaleString()}</p>
         <p>Traffic Police Helpline 1915.</p>
     `;
