@@ -17,35 +17,33 @@ function submitForm() {
 
     // Display data on the custom-designed page
     const displayData = document.getElementById('displayData');
+    
+    // Generate QR code using QuickChart API
+    const qrCodeApiUrl = `https://quickchart.io/qr?text=${encodeURIComponent(combinedValues)}`;
     displayData.innerHTML = `
-        <p style = "font-size:14px;"><strong>Khyber Pakhtunkhwa</strong></p>
-        <p style = "font-size:10px;">Traffic Police</p>
-        <p><strong>............................</strong></p>
-        <p style = "font-weight: 2000; font-weight: bold;">Swat</p>
-        <p style = "font-weight: 2000; font-weight: bold;">
-        ${idValue}</p>
-        <p style = "font-weight: 2000; font-weight: bold;">PAID</p>
+        <p style="font-size:22px;"><strong>Khyber Pakhtunkhwa</strong></p>
+        <div style="font-size: 16px; transform: scaleY(2); transform-origin: 0 0;">Traffic Police</div><br>
+        <p style = "font-weight: bold; font-size:15px; margin-bottom: 0px; "><strong>............................</strong></p>
+        <article style = "font-weight: bold; font-size:19px;">Swat</article>
+        <article style = "font-weight: bold; font-size:19px;">${idValue}</article>
+        <article style = "font-weight: bold; font-size:19px;">PAID</article>
         
-        <p>Offender : ${uppercaseOffenderValue}</p>
-        <p>
-        V.Reg# : ${vRegNumberValue1}</p>
+        <p style = "transform: scaleY(1.5); transform-origin: 0 0; margin-top: 0px;">Offender : ${uppercaseOffenderValue}</p>
+        <p style = "transform: scaleY(1.5); transform-origin: 0 0; margin-bottom: 20px;">V.Reg# : ${vRegNumberValue1}</p>
         
-        <p><strong>............................</strong></p>
-        <p>Violation Code's : ${violationCodeValue1}</p>
-        <p>
-        Challan Amount : PKR. ${challanAmountValue.toFixed(0)}</p>
-        <p>
-        Service Fee     : PKR. ${serviceFeeValue.toFixed(0)}</p>
+        <p style = "font-weight: bold; font-size:15px; vertical-align: top; margin-bottom: 10px;"><strong>............................</strong></p>
+        <p style = "transform: scaleY(1.5); transform-origin: 0 0;">Violation Code's : ${violationCodeValue1}</p>
+        <p style = "transform: scaleY(1.5); transform-origin: 0 0;">Challan Amount : PKR. ${challanAmountValue.toFixed(0)}</p>
+        <p style = "transform: scaleY(1.5); transform-origin: 0 0; margin-bottom: 20px;">Service Fee : PKR. ${serviceFeeValue.toFixed(0)}</p>
         
-        <p><strong>............................</strong></p>
-        <p>
-        Total Amount    : PKR. ${totalAmountValue.toFixed(0)}</p>
-        <br><strong>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(combinedValues)}&size=65x65" alt="QR Code">
-        </strong>
-        <p>Received By: TO Farhan Ali (172 5)</p>
-        <p>at ${new Date().toLocaleString()}</p>
-        <p>Traffic Police Helpline 1915.</p>
+        <p style = "font-weight: bold; font-size:15px; vertical-align: top; margin-bottom: 10px;"><strong>............................</strong></p>
+        <p style = "transform: scaleY(1.5); transform-origin: 0 0; margin-bottom: 5px;">Total Amount : PKR. ${totalAmountValue.toFixed(0)}</p>
+        <br>
+        <img src="${qrCodeApiUrl}" alt="QR Code" width="75" height="75">
+        
+        <section style = "margin-top: 5px;">Received By: TO Farhan Ali (1725)</section>
+        <section>at ${new Date().toLocaleString()}</section>
+        <section>Traffic Police Helpline 1915.</section>
     `;
 
     // Show the custom-designed page
@@ -59,7 +57,6 @@ function generateRandomId() {
     const max = Math.pow(10, 10) - 1; // 10^10 - 1
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 
 function printDisplayPage() {
     window.print();
