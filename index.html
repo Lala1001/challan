@@ -5,28 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Submission</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sono&display=swap">
 
-  <style>
-    body {
-      /* font-family: 'Press Start 2P', cursive; */
-      font-family: 'Sono', sans-serif;
-    }
-
-    
-  </style>
+    <style>
+        body {
+            font-family: 'Sono', sans-serif;
+        }
+    </style>
 
 </head>
 <body>
     <form id="myForm">
         <a href="https://kppolice.gov.pk/" target="_blank"> <img src="logo.png" alt="Police-logo" height="100px" width="100px" style="display: block; margin: auto;"> </a>
         <h1 style="text-align: center;">Challan Form</h1>
-        <!-- Randomly generated ID field -->
-        <label for="idField">ID:</label>
-        <input type="text" id="idField" value="" placeholder="Auto generated" readonly style="background-color: red;">
 
-        <!-- User input fields -->
+        <!-- Manually input ID field -->
+        <label for="manualIdField">Manual ID:</label>
+        <input type="text" id="manualIdField" placeholder="Enter manual ID">
+
         <label for="nameField">Name:</label>
         <input type="text" id="nameField" placeholder="Enter your name" required>
 
@@ -39,15 +35,9 @@
         <label for="amountField">Amount:</label>
         <input type="number" id="amountField" placeholder="Enter amount" required>
 
-        <!-- Static Fee field -->
         <label for="feeField">Fee:</label>
         <input type="text" id="feeField" value="17" readonly>
 
-        <!-- Display Total field -->
-        <label for="totalField">Total:</label>
-        <input type="text" id="totalField" value="" placeholder="Auto generated" readonly style="background-color: red;">
-
-        <!-- Submit button -->
         <button type="button" onclick="submitForm()">Submit</button>
     </form>
 
@@ -57,7 +47,6 @@
         <div id="qrCode"></div>
         <div id="dateTime"></div>
         <button id="printButton" class="print-btn" onclick="printDisplayPage()">Print</button>
-
     </div>
 
     <script src="script.js"></script>
