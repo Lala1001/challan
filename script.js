@@ -19,26 +19,26 @@ function submitForm() {
     const qrCodeApiUrl = `https://quickchart.io/qr?text=${encodeURIComponent(combinedValues)}`;
     displayData.innerHTML = `
         <p style="font-size:22px;"><strong>Khyber Pakhtunkhwa</strong></p>
-        <div style="font-size: 16px; transform: scaleY(2); transform-origin: 0 0;">Traffic Police</div><br>
-        <p style="font-weight: bold; font-size:15px; margin-bottom: 0px; "><strong>............................</strong></p>
-        <article style="font-weight: bold; font-size:19px;">Swat</article>
-        <article style="font-weight: bold; font-size:19px;">${manualIdValue}</article>
-        <article style="font-weight: bold; font-size:19px;">PAID</article>
+        <div style="font-size: 15px; transform: scaleY(1.5); transform-origin: 0 0;">Traffic Police</div><br>
+        <p style="font-weight: bold; font-size:15px; margin-bottom: -2px; "><strong>............................</strong></p>
+        <article style="font-weight: bold; font-size:20px; margin-bottom: -2.5px;">Swat</article>
+        <article style="font-weight: bold; font-size:20px; margin-bottom: -2.5px;">${manualIdValue}</article>
+        <article style="font-weight: bold; font-size:20px;">PAID</article>
         
-        <p style="transform: scaleY(1.5); transform-origin: 0 0; margin-top: 0px;">Offender : ${uppercaseOffenderValue}</p>
-        <p style="transform: scaleY(1.5); transform-origin: 0 0; margin-bottom: 20px;">V.Reg# : ${vRegNumberValue1}</p>
+        <p style="transform: scaleY(1.5); transform-origin: 0 0; margin-top: -5px;">Offender : ${uppercaseOffenderValue}</p>
+        <p style="transform: scaleY(1.5); transform-origin: 0 0; margin-bottom: 15px; margin-top: -15px;">V.Reg# : ${vRegNumberValue1}</p>
         
-        <p style="font-weight: bold; font-size:15px; vertical-align: top; margin-bottom: 10px;"><strong>............................</strong></p>
+        <p style="font-weight: bold; font-size:15px; vertical-align: top; margin-bottom: 7px;"><strong>............................</strong></p>
         <p style="transform: scaleY(1.5); transform-origin: 0 0;">Violation Code's : ${violationCodeValue1}</p>
         <p style="transform: scaleY(1.5); transform-origin: 0 0;">Challan Amount : PKR. ${challanAmountValue.toFixed(0)}</p>
-        <p style="transform: scaleY(1.5); transform-origin: 0 0; margin-bottom: 20px;">Service Fee : PKR. ${serviceFeeValue.toFixed(0)}</p>
+        <p style="transform: scaleY(1.5); transform-origin: 0 0; margin-bottom: 15px;">Service Fee : PKR. ${serviceFeeValue.toFixed(0)}</p>
         
-        <p style="font-weight: bold; font-size:15px; vertical-align: top; margin-bottom: 10px;"><strong>............................</strong></p>
+        <p style="font-weight: bold; font-size:15px; vertical-align: top; margin-bottom: 7px;"><strong>............................</strong></p>
         <p style="transform: scaleY(1.5); transform-origin: 0 0; margin-bottom: 5px;">Total Amount : PKR. ${totalAmountValue.toFixed(0)}</p>
         <br>
         <img src="${qrCodeApiUrl}" alt="QR Code" width="75" height="75">
         
-        <section style="margin-top: 5px;">Received By: TO Farhan Ali (1725)</section>
+        <section style="margin-top: -5px;">Received By: TO Farhan Ali (1725)</section>
         <section>at ${new Date().toLocaleString()}</section>
         <section>Traffic Police Helpline 1915.</section>
     `;
