@@ -96,9 +96,10 @@ img {
 
 div {
     margin-top: -25px;
-    margin-bottom: 5px;
+    margin-bottom: -5px;
 }
 
 section {
-    margin-bottom: -2px;
+    margin-bottom: 3px;
+    transform: scaleY(1.5); transform-origin: 0 0;
 }
